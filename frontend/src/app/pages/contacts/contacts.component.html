@@ -1,0 +1,40 @@
+<div>
+    <ngx-addcontacts></ngx-addcontacts>
+</div>
+<nb-layout center>
+    <nb-layout-header><h3>All Contacts</h3>
+        </nb-layout-header>
+  
+    <nb-layout-column>
+        
+        <div class="table">
+            <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>TITLE</th>
+                    <th>ORGANISATION</th>
+                    <th>EMAIL ADDRESS</th>
+                    <th>PHONE</th>
+                    <th>FACEBOOK ID</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of contacts">
+                    <td>{{item.name}}</td>
+                    <td>{{item.title}}</td>
+                    <td>{{item.organistion}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.phone}}</td>
+                    <td>{{item.facebookid}}</td>
+                    <td><button class="btn btn-warning"(click)="edit(item._id)">Edit</button>
+                        <div></div>
+                        <button class="btn btn-danger mt-10"(click)="deleteContact(item._id)">Delete</button></td>
+                </tr>
+            </tbody>
+        </div>
+    </nb-layout-column>
+  
+    <nb-layout-footer>Contact us</nb-layout-footer>
+    
+  </nb-layout>

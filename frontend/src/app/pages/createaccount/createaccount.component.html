@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <h3 style="text-align: center;">Create Account</h3>
+    <form [formGroup]="user" (ngSubmit)="submit()" > 
+        <div class="form-group">
+        <label>COMPANY DOMAIN NAME*</label>
+        <input type="text" class="form-control" formControlName="companydomain" placeholder="The Walt Disney Company">
+    </div>
+    <div class="form-group">
+        <label>INDUSTRY</label>
+        <select type="text" class="form-control" formControlName="industry" placeholder="Select Industry">
+            <option value="gventure">gventure</option>
+            <option value="xotive">xotive</option>
+        </select>
+    </div>
+  
+    <div class="form-group">
+        <label>COMPANY OWNER</label>
+        <input type="text" class="form-control" formControlName="companyowner" placeholder="Enter Owner Name">
+    </div>
+    <div class="form-group">
+      <label>PHONE NUMBER</label>
+      <input type="text" class="form-control" formControlName="phone" placeholder="Enter a phone number">
+  </div>
+  <div class="form-group">
+      <label>CITY</label>
+      <input type="text" class="form-control" formControlName="city" placeholder="CAMBRIDGE">
+  </div>
+  <div class="form-group">
+    <label>STATE/REGION</label>
+    <input type="text" class="form-control" formControlName="state" placeholder="UNITED STATE">
+</div>
+<div class="form-group">
+  <label>POSTEL CODE</label>
+  <input type="text" class="form-control" formControlName="postalcode" placeholder="Enter code">
+</div>
+<div class="form-group">
+  <label>LINKEDIN COMPANY PAGE</label>
+  <input type="text" class="form-control" formControlName="linkedin" placeholder="www.linkedin.in">
+</div>
+    <div class="form-group">
+        <button type="submit" class="form-control btn btn-success" [disabled]=" !user.valid">Save</button>
+    </div></form>
+        </div>
+       
+    </div>
+    
+   
+  </div>
+  
